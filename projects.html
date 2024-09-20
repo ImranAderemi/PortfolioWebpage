@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imran Aderemi</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/ab68b646cd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<!----- NAVBAR ----->
+<nav>
+    <ul class="sidebar">
+
+        <li onclick=HideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#fffff"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg></a></li>
+
+        <li><a href="/Home.html">Home</a></li>
+
+        <li><a href="/projects.html"><u><b>Projects</b></u></a></li>
+
+        <li><a href="/88.html">#88</a></li>
+
+        <li><a href="Files\Imran_Aderemi_CV(PDF).pdf" download class="download-btn" title="Download My CV"><i class="fa-solid fa-download"></i>CV</a></li>
+    </ul>
+    <ul>
+        <li><a href="/Home.html"><img src="images\signature.jpg" alt="Imran Aderemi" title="Imran Aderemi" width="150" height="50"></a></li>
+
+        <li class="HideOnMobile"><a href="/Home.html">Home</a></li>
+
+        <li class="HideOnMobile"><a href="/projects.html"><u><b>Projects</b></u></a></li>
+
+        <li class="HideOnMobile"><a href="/88.html">#88</a></li>
+
+        <li class="HideOnMobile"><a href="Files\Imran_Aderemi_CV(PDF).pdf" download class="download-btn" title="Download My CV"><i class="fa-solid fa-download"></i>CV</a></li>
+
+        <li class="MenuButton" onclick=ShowSidebar() ShowSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#fffff"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+
+</nav>
+
+<script> 
+    function ShowSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+}
+    function HideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+    }
+
+</script>
+
+<!----- HERO ----->
+<div class="ProjectsHero">
+    
+    <div class="PortfolioTitle">
+        <h1>My Portfolio</h1>
+    </div>
+    <p class="PortfolioDesc">Here are some of the projects that I've created:<br> However, more will be <b><i>coming soon</i></b> and this page will be updated gradually. <b>:</b>)</p>
+
+
+<script>
+function toggleDescription(button) {
+    const fullDescription = button.previousElementSibling;  // The full description
+    const isVisible = fullDescription.style.display === 'block';  // Check visibility state
+
+    if (isVisible) {
+        fullDescription.style.display = 'none';  // Hide the description
+        button.textContent = 'Expand';  // Change button text back to "Expand"
+    } else {
+        fullDescription.style.display = 'block';  
+        button.textContent = 'Show Less';
+    }
+}
+</script>
+
+    <div class="portfolio-list">
+
+        <!-- First project -->
+        <div class="portfolio-item">
+            <h3><b><u>Project 1: HotBeans Web Solutions</u></b></h3>
+
+            <div class="brief-description">
+                <p>My first attempt at creating a webpage using HTML, CSS and JavaScript.</p>
+            </div>
+
+            <div class="full-description">
+                <p><i>May 2023 - June 2023</i></p>
+                <p>In year 12, as part of my IT course i was tasked with creating a webpage with only a brief description of what the website should include and depict. The only information about HotBeans that i was given was that it's a web development company, and they're looking to hire a new junior web devloper.<br> So over a period of 2-weeks I had to teach myself the basics of HTML, then CSS and Javascript. I primarily used a combination of YouTube tutorials Reddit and Stack overflow.</p>
+                
+                <h3>Technologies Used:</h3>
+                <p class="Port-Tech">- HTML</p>
+                <P class="Port-Tech">- JavaScript</P>
+                <P class="Port-Tech">- CSS</P>
+
+
+            <a href="https://github.com/ImranAderemi/HotBeans" class="Linkbutton" target="_blank" title=""><b><i class="fa-brands fa-github"></i></b></a>
+            </div>
+
+            <button class="expand-btn" onclick="toggleDescription(this)">Show More</button>
+        </div>
+
+
+
+
+        <!-- Second project -->
+        <div class="portfolio-item">
+            <h3><b><u>Project 2: Heart Monitor</u></b></h3>
+
+            <div class="brief-description">
+                <p>My very first project using C++.</p>
+            </div>
+
+            <div class="full-description">
+                <p><i>June 2023 - July 2023</i></p>
+                <p>During College, In year 12 I was learning how to use C++ to make a basic application. I was then told to pick a basic application from a list on the brief, the application that I ended up choosing was a heart monitor. However before posting it I decided to edit and refine it a little.</p>
+                
+                <h3>Technologies Used:</h3>
+                <p class="Port-Tech">- C++</p>
+
+
+
+            <a href="https://github.com/ImranAderemi/HeartMonitor" class="Linkbutton" target="_blank" title=""><b><i class="fa-brands fa-github"></i></b></a>
+            </div>
+
+            <button class="expand-btn" onclick="toggleDescription(this)">Show More</button>
+        </div>
+
+        <!-- Third project -->
+        <!--<div class="portfolio-item">
+            <h3><b><u>Project 3: </u></b></h3>
+
+            <div class="brief-description">
+                <p>.</p>
+            </div>
+
+            <div class="full-description">
+                <p><i>.</i></p>
+                <p>.</p>
+                
+                <h3>Technologies Used:</h3>
+                <p>- </p>
+                <P>- </P>
+                <P>- </P>
+
+
+
+            <a href="" class="Linkbutton" target="_blank" title=""><b><i class="fa-brands fa-github"></i></b></a>
+            </div>
+
+            <button class="expand-btn" onclick="toggleDescription(this)">Show More</button>
+        </div>-->
+
+        <!-- Fourth project -->
+        <!--<div class="portfolio-item">
+            <h3><b><u>Project 4: </u></b></h3>
+
+            <div class="brief-description">
+                <p>.</p>
+            </div>
+
+            <div class="full-description">
+                <p><i>.</i></p>
+                <p>.</p>
+                
+                <h3>Technologies Used:</h3>
+                <p>- </p>
+                <P>- </P>
+                <P>- </P>
+
+
+
+            <a href="" class="Linkbutton" target="_blank" title=""><b><i class="fa-brands fa-github"></i></b></a>
+            </div>
+
+            <button class="expand-btn" onclick="toggleDescription(this)">Show More</button>
+        </div>-->
+
+    </div>
+    <h6></h6>
+    <h6></h6>
+
+</div>
+
+<!----- FOOTER ----->
+
+<footer class="Footer">
+    <p>Email: <a href="mailto:imran.a.aderemi@gmail.com">imran.a.aderemi@gmail.com</a></p>
+    <p>Phone: <a href="tel:+447576843583">+44 7576 843583</a></p>
+    <p>Location: London, England</p>
+    
+    <a href="https://www.linkedin.com/in/imran-aderemi/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://github.com/ImranAderemi" target="_blank"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.instagram.com/imi.co.uk?igsh=eXcwdmJiYzhpZTN2&utm_source=qr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://youtube.com/@ifb_88?si=Peltgpg2qp_hvCPR" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    <div class="FooterCredits">
+        <p><i>Designed and Built by <b>Imran Aderemi</b></i></p>
+    </div>   
+</footer>
+    
+    
+    </body>
+    </html>

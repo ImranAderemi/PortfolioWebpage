@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imran Aderemi</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/ab68b646cd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<!----- NAVBAR ----->
+<nav>
+    <ul class="sidebar">
+
+        <li onclick=HideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#fffff"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg></a></li>
+
+        <li><a href="/Home.html">Home</a></li>
+
+        <li><a href="/projects.html">Projects</a></li>
+
+        <li><a href="/88.html"><u><b>#88</b></u></a></li>
+
+        <li><a href="Files\Imran_Aderemi_CV(PDF).pdf" download class="download-btn" title="Download My CV"><i class="fa-solid fa-download"></i> CV</a></li>
+    </ul>
+    <ul>
+        <li><a href="/Home.html"><img src="images\signature.jpg" alt="Imran Aderemi" title="Imran Aderemi" width="150" height="50"></a></li>
+
+        <li class="HideOnMobile"><a href="/Home.html">Home</a></li>
+
+        <li class="HideOnMobile"><a href="/projects.html">Projects</a></li>
+
+        <li class="HideOnMobile"><a href="/88.html"><u><b>#88</b></u></a></li>
+
+        <li class="HideOnMobile"><a href="Files\Imran_Aderemi_CV(PDF).pdf" download class="download-btn" title="Download My CV"><i class="fa-solid fa-download"></i>CV</a></li>
+
+        <li class="MenuButton" onclick=ShowSidebar() ShowSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#fffff"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+
+</nav>
+
+<script> 
+    function ShowSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+}
+    function HideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+    }
+
+</script>
+
+
+<!----- HERO ----->
+<div class="I88Hero">
+        
+    <div class= "I88Title">
+        <h1>#88</h1>
+    </div>
+
+    <div class="I88desc">
+        <p><b>IA 88 is more than just a combination of letters and numbers, it's an alternative persona.</b></p>
+        
+        <p>#IFB88 and #IA88, are where everything motorsports and gaming can be found.</p>
+    </div>
+
+
+    <table class="image-text-table">
+        <tr>
+            <td class="image-cell">
+                <img src="images\ia88.jpg" alt="IA88" title="IA88" width="200" height="200">
+            </td>
+
+            <td class="text-cell">
+                <p><b>IA88</b> is a legacy that is being continuosuly worked on, Its a continuous tale of the pursuit of speed and success. </p>
+                <a href="https://www.instagram.com/imi.co.uk?igsh=eXcwdmJiYzhpZTN2&utm_source=qr" class="Linkbutton" target="_blank" title="Instagram"><b><i class="fa-brands fa-instagram"></i></b></a>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="image-cell">
+                <img src= "images\IFB88.jpg" alt="IFB88" title="IFB88" width="200" height="200" />
+            </td>
+            <td class="text-cell">
+                <p><b>IFB88</b> is where all gaming content and shenanigans are uploaded.</p>
+                <a href="https://youtube.com/@ifb_88?si=Peltgpg2qp_hvCPR" class="Linkbutton" target="_blank" title="YouTube"><b><i class="fa-brands fa-youtube"></i></b></a>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="image-cell">
+                <img src= "images\HSRL.jpg" alt="HSRL" title="HSRL" width="200" height="200" />
+            </td>
+            <td class="text-cell">
+                <p><b>HSRL</b> (also known as the <b>High Speed Racing Leauge</b>) is a family of motorsport fans that share a common passion for motorsports and racing.</p>
+                <a href="https://www.instagram.com/hsrl_official?igsh=Zmd4ZHl5a3cyd2Fk&utm_source=qr" class="Linkbutton" target="_blank" title="Instagram"><b><i class="fa-brands fa-instagram"></i></b></a>
+                <a href="https://6407409b9b9f0.site123.me/" class="Linkbutton" target="_blank" title="Website"><b><i class="fa-solid fa-globe"></i></b></a>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="image-cell">
+                <img src="images\The88Collection.jpg" alt="The88Collection" title="The88Collection" width="200" height="200">
+            </td>
+            <td class="text-cell">
+                <p><b>The 88 Collection</b> is a showcase of vehichles that are affiliated with or part of <b>'The 88 Collection'.</b></p>
+                <a href="https://www.instagram.com/the_88_collection?igsh=MWhucHlucTJrejYybw==" class="Linkbutton" target="_blank" title="Instagram"><b><i class="fa-brands fa-instagram"></i></b></a>
+            </td>
+        </tr>
+    </table>
+    <h6></h6>
+</div>
+
+<!----- FOOTER ----->
+
+<footer class="Footer">
+    <p>Email: <a href="mailto:imran.a.aderemi@gmail.com">imran.a.aderemi@gmail.com</a></p>
+    <p>Phone: <a href="tel:+447576843583">+44 7576 843583</a></p>
+    <p>Location: London, England</p>
+    
+    <a href="https://www.linkedin.com/in/imran-aderemi/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://github.com/ImranAderemi" target="_blank"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.instagram.com/imi.co.uk?igsh=eXcwdmJiYzhpZTN2&utm_source=qr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://youtube.com/@ifb_88?si=Peltgpg2qp_hvCPR" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    <div class="FooterCredits">
+        <p><i>Designed and Built by <b>Imran Aderemi</b></i></p>
+    </div>   
+</footer>
+    
+    
+    </body>
+    </html>
+

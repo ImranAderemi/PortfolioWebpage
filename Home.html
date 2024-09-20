@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imran Aderemi</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/ab68b646cd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!--<div class="video-intro" id="video-intro">
+        <video autoplay muted id="intro-video">
+            <source src="videos\Web-Intro.mp4" type="video/mp4">
+        </video>
+    </div>
+
+<script>
+    // Add a listener to the video element
+    const video = document.getElementById('intro-video');
+    const videoContainer = document.getElementById('video-intro');
+    const body = document.body;
+
+    function fadeOutVideo() {
+        videoContainer.classList.add('hidden'); // Apply fade-out class
+        body.classList.remove('no-scroll');
+    }
+
+    video.onended = function() {
+        fadeOutVideo();
+    };
+
+    // Prevent scrolling while video is playing
+    window.onload = function() {
+        body.classList.add('no-scroll');
+    };
+</script>-->
+
+<!----- NAVBAR ----->
+<nav>
+    <ul class="sidebar">
+
+        <li onclick=HideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#fffff"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg></a></li>
+
+        <li><a href="/Home.html"><u><b>Home</b></u></a></li>
+
+        <li><a href="/projects.html">Projects</a></li>
+
+        <li><a href="/88.html">#88</a></li>
+
+        <li><a href="Files\Imran_Aderemi_CV(PDF).pdf" download class="download-btn" title="Download My CV"><i class="fa-solid fa-download"></i>CV</a></li>
+    </ul>
+    <ul>
+        <li><a href="/Home.html"><img src="images\signature.jpg" alt="Imran Aderemi" title="Imran Aderemi" width="150" height="50"></a></li>
+
+        <li class="HideOnMobile"><a href="/Home.html"><u><b>Home</b></u></a></li>
+
+        <li class="HideOnMobile"><a href="/projects.html">Projects</a></li>
+
+        <li class="HideOnMobile"><a href="/88.html">#88</a></li>
+
+        <li class="HideOnMobile"><a href="Files\Imran_Aderemi_CV(PDF).pdf" download class="download-btn" title="Download My CV"><i class="fa-solid fa-download"></i>CV</a></li>
+
+        <li class="MenuButton" onclick=ShowSidebar() ShowSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#fffff"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+
+</nav>
+
+<script> 
+    function ShowSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+}
+    function HideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+    }
+
+</script>
+
+
+<!----- HERO ----->
+<div class="HomeHero">
+    
+    <div class="HomeTitle">
+        <h1>Imran Aderemi</h1>
+        <h5><i>Aspiring Software Developer</i></h5>
+        <div class="HomeTitleBio">
+            <p><b>Aspiring Software Developer, Creating Applications and Building Websites</b></p>
+        </div>
+        <div class="HomeLinks">
+            <a href="https://www.linkedin.com/in/imran-aderemi/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/ImranAderemi" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/imi.co.uk?igsh=eXcwdmJiYzhpZTN2&utm_source=qr" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+    <div class="HomeHeroNote">
+        <p>My coding Journey began back in late 2019, I was stuck and and felt stranded, I wasnt sure what I wanted to become or where I wanted my career journey to lead me to.</p>
+        <p>Then during a computer science lesson my teacher introduced us to python, and it was that very lesson that i decided that i wanted to my profession to involve programming. I fell inlove with the seemingly endless possibilities that it could unlock. I also fell in love with the logical aspect of programming and found it oddly rewarding and fullfilling.</p>
+        <h6></h6>
+        <p>Currently <b>my main focus is looking for opportunities to gain work experience as a Software Developer</b>, but also learning skills that may also help me in a professional workplace setting.</p>
+        <h6></h6>
+        <p>When I'm not behind at my keyboard, I'm usually Sim Racing, Building Gaming PCs, or dabbling in some form of Motorsports.</p>
+    </div>
+
+</div>
+
+<!--About me section-->
+<div class="AboutMeHero">
+
+    <!--<div class="AboutMeTitle">
+        <h1>Who is Imran Aderemi?</h1>
+    </div>-->
+
+
+    <div class="AMABTMEBio">
+        <!-- Image on the left -->
+        <img src="images\portraitpic.jpg" alt="Imran Aderemi">
+    
+        <!-- Text on the right -->
+        <div class="AMABTMEContent">
+            <p>Hi, I'm <b>Imran</b> - An <b>Aspiring Software Developer</b> based in the UK. </p>
+            <p>In my spare time I’ve taught myself how to use various different programming languages such as <b>C++</b>, <b>C#</b>, <b>Python</b>, <b>HTML</b>, <b>JavaScript</b>, and <b>CSS</b>.</p>
+        </div>
+    </div>
+
+    <!--<div class="HomeHeroNote">
+        <p><b>This webpage is more than just a portfolio or description, it's a live representation of me as a person, but also what projects I am / have previously worked on.</b></p>
+    </div>-->
+
+    <!--<div class="AMABTME">
+        <p>I’m an 18-year-old aspiring software developer. In my spare time I’ve taught myself an array of different programming languages, methods, and principles. These include C++, C#, Python, Pseudocode, HTML, JavaScript, and CSS.</p>
+    </div>-->
+    
+    
+    <div class="AMexp">
+        <div class="AMexpItem1">
+            <h2>Experience</h2>
+            <h4><b>Intern Web Developer, </b>21K Digital Media</h4>
+            <h5><i>11 Mar 2024 – 28 Mar 2024</i></h5>
+            <p>Through college, I was assigned a 2-week work placement with 21K Digital Media, in which I could focus on and further developing my existing skills using <b>HTML</b>, <b>CSS</b>, and <b>JavaScript</b>.</p>
+            <p>A specific project that we worked on involved developing a webpage for a client from conceptualization to deployment, during this project my teams role was to provide drafts and mock-ups that were then given to the client as inspiration so they can help the team tailor their expectations for the final product. </p>
+        </div>
+
+        <div class="AMexpItem2">
+            <h4><b>Junior Games Developer, </b>Metrocalk</h4>
+            <h5><i>20 Mar 2023 – 31 Mar 2023</i></h5>
+            <p>As part of my college curriculum, I was assigned a work placement opportunity that involved practicing and developing my game development skills using  <b>Unreal Engine 4</b> and <b>Unreal Engine 5</b>.<br> During this work placement, I created levels and mini-projects in Unreal and practiced exploding some of its features.  </p>
+        </div>
+    </div>
+
+
+    <div class="AMedu">
+        <h2>Education</h2>
+        <h4>Westminster Kingsway College (Sep 2022 - Jul 2024)</h4>
+        <p>Level 3 National Extended Diploma in Information Technology - <b>MMM</b></p>
+
+        <h4>Westminster City School (Sep 2017 - Aug 2022)</h4>
+        <p>GCSE Mathematics - <b>5</b></p>
+        <p>GCSE English Language - <b>5</b></p>
+        <p>GCSE English Literature - <b>5</b></p>
+        <p>GCSE Geography - <b>6</b></p>
+        <p>GCSE Computer Science - <b>5</b></p>
+        <p>GCSE Combined Science - <b>6-6</b></p>
+        <p>GCSE Design and Technology - <b>5</b></p>
+        <p>GCSE Religious Studies - <b>4</b></p>
+    </div>
+
+    <div class="AMawd">
+        <h2>Awards</h2>
+        <h4></h4> <!-- Purpose of this to leave a space under the section-->
+        <p> - Certificate of Distinction, UK Bebras Challenge 2020 (January 2020)</p>
+    </div>
+
+
+    <div class="AMts">
+        <h2>Technology and Skills</h2>
+        <h4></h4> <!-- Purpose of this to leave a space under the section-->
+        <p><b>Some of the Technology and skills that I have experience with, and can demonstrate are;</b></p>
+        
+        <div class="TSList">
+            <p class="bubble-wrap">JavaScript</p><p class="bubble-wrap">HTML5</p><p class="bubble-wrap">CSS</p><p class="bubble-wrap">C++</p><p class="bubble-wrap">C#</p><p class="bubble-wrap">Unreal Engine 4 & 5</p><p class="bubble-wrap">Pseudocode</p><p class="bubble-wrap">SQL/Excel</p><p class="bubble-wrap">Python</p>
+        </div>
+
+    </div>
+    <h6></h6> <!--leaves space-->
+</div>
+
+
+
+<!----- FOOTER ----->
+
+<footer class="Footer">
+    <p>Email: <a href="mailto:imran.a.aderemi@gmail.com">imran.a.aderemi@gmail.com</a></p>
+    <p>Phone: <a href="tel:+447576843583">+44 7576 843583</a></p>
+    <p>Location: London, England</p>
+    
+    <a href="https://www.linkedin.com/in/imran-aderemi/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://github.com/ImranAderemi" target="_blank"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.instagram.com/imi.co.uk?igsh=eXcwdmJiYzhpZTN2&utm_source=qr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://youtube.com/@ifb_88?si=Peltgpg2qp_hvCPR" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    <div class="FooterCredits">
+        <p><i>Designed and Built by <b>Imran Aderemi</b></i></p>
+    </div>   
+</footer>
+    
+    
+    </body>
+    </html>
