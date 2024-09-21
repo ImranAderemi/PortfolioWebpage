@@ -545,7 +545,8 @@ nav li:first-child {
     .AMABTMEBio img {
         padding-bottom: 25px;
         border-radius: 55px;
-        max-width: 75%
+        max-width: 350px;
+        max-height: 350px;
     }
 
     .AMedu h4, .AMexp h4 {
@@ -558,6 +559,58 @@ nav li:first-child {
 
     .AMts h2 {
         padding-right: 10px;
+    }
+
+    .HomeTitle{
+        text-align: center;
+        align-items: center;
+        float: left;
+        width: 100%;
+        margin-left: 0;
+        padding-bottom: 155px;
+        padding-top: 3%;
+        padding-right: 3%;
+        padding-left: 3%;
+    }
+
+    .HomeTitleBio{
+        text-align: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .HomeLinks a{
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        padding-right: 5%;
+        padding-left: 5%;
+        gap: 5px;
+    }
+
+    .AMexpItem1 h2, .AMexpItem1 h4, .AMexpItem1 h5, .AMexpItem1 p, .AMexpItem2 h5, .AMexpItem2 p, .AMexpItem2 h4, .AMexpItem2 h2, .AMedu h2, .AMedu h4, .AMedu p, .AMawd h2, .AMawd p, .AMts h2, .AMtsP p{
+        align-items: center;
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-left: 0%;
+        margin-right: 0%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .PortfolioDesc{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .image-cell-img{
+        height: 155px;
+        width: 155px;
+    }
+
+    .image-cell{
+        padding-bottom: 100px;
     }
 }
 
@@ -635,7 +688,7 @@ nav li:first-child {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 1; /*Remember tochange back to 1*/
+    opacity: 1; /*Remember to change back to 1*/
     transition: opacity 2 ease-in-out; /* Transition for fading out */
 
 
