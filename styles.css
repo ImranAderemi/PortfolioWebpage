@@ -20,6 +20,7 @@ nav {
     background-color: white;
     backdrop-filter: blur(10px);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
 }
 
 nav ul {
