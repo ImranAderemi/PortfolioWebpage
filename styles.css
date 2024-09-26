@@ -443,7 +443,7 @@ nav li:first-child {
     color: rgb(187, 186, 186);
 }
 
-.AMexpItem1{
+.AMexpItem1, .AMexpItem2, .AMexpItem3{
     padding-bottom: 45px;
 }
 
@@ -589,7 +589,7 @@ nav li:first-child {
         gap: 5px;
     }
 
-    .AMexpItem1 h2, .AMexpItem1 h4, .AMexpItem1 h5, .AMexpItem1 p, .AMexpItem2 h5, .AMexpItem2 p, .AMexpItem2 h4, .AMexpItem2 h2, .AMedu h2, .AMedu h4, .AMedu p, .AMawd h2, .AMawd p, .AMts h2, .AMtsP p{
+    .AMexpItem1 h2, .AMexpItem1 h4, .AMexpItem1 h5, .AMexpItem1 p, .AMexpItem2 h5, .AMexpItem2 p, .AMexpItem2 h4, .AMexpItem2 h2, .AMexpItem3 h5, .AMexpItem3 p, .AMexpItem3 h4, .AMexpItem3 h2 , .AMedu h2, .AMedu h4, .AMedu p, .AMawd h2, .AMawd p, .AMts h2, .AMtsP p{
         align-items: center;
         text-align: center;
         padding-left: 5%;
