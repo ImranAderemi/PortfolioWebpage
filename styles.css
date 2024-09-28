@@ -443,6 +443,10 @@ nav li:first-child {
     color: rgb(187, 186, 186);
 }
 
+.AMawd p{
+    padding-bottom: 25px;
+}
+
 .AMexpItem1, .AMexpItem2, .AMexpItem3{
     padding-bottom: 45px;
 }
