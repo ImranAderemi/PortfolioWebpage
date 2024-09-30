@@ -165,6 +165,7 @@ nav li:first-child {
 .full-description a {
     padding-top: 35px;
     padding-bottom: 10px;
+    display: block;
 }
 
 .full-description h3 {
@@ -177,7 +178,14 @@ nav li:first-child {
 }
 
 .Port-Tech {
-    font-size: small;
+    display: inline-block;
+    padding: 5px 15px;
+    border: 2px solid rgb(116, 7, 241); 
+    border-radius: 15px; 
+    background-color: rgb(46, 0, 46); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    margin: 3px; 
+    color: rgb(103, 144, 214);
 }
 
 .expand-btn {
