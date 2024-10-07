@@ -1,0 +1,1 @@
+A webpage that I created to help me showcase my portfolio, it also acts as a biography for myself and showcases my skills and accomplishments. The website also helps me showcase my ability to create a basic webpage using HTML, CSS, and JavaScript.
