@@ -9,19 +9,14 @@ menu.addEventListener('click', function(){
 
 // Toggles full description
 function toggleDescription(button) {
-    const fullDescription = button.previousElementSibling;  // full description
+    const fullDescription = button.previousElementSibling;  
     const isVisible = fullDescription.style.display === 'block';  
 
     if (isVisible) {
-        fullDescription.style.display = 'none';  // Hides description
-        button.textContent = 'Expand';  // Changes button text back to "Expand"
+        fullDescription.style.display = 'none';  
+        button.textContent = 'Show More';  
     } else {
-        fullDescription.style.display = 'block';  // Shows description
-        button.textContent = 'Collapse';  // Change button text to "Collapse"
+        fullDescription.style.display = 'block';  
+        button.textContent = 'Show Less';  
     }
 }
-
-
-
-
-
