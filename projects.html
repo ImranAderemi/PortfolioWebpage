@@ -1,359 +1,745 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imran Aderemi</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/ab68b646cd.js" crossorigin="anonymous"></script>
-    <meta name="google-site-verification" content="NcYSNSAwL1tfuZwNo6LcPloo8qWBxC8ABkS1TbmoFBE" />
-    <link rel="icon" type="image/jpg" href="images\ia88.jpg">
-</head>
-
-<body>
-
-<!----- NAVBAR ----->
-<nav>
-    <ul class="sidebar">
-
-        <li onclick=HideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#fffff"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg></a></li>
-
-        <li><a href="/index.html">Home</a></li>
-
-        <li><a href="/projects.html"><b>Projects</b></a></li>
-
-        <!--<li><a href="/88.html">88</a></li>-->
-
-        <li><a href="Imran_Aderemi_CV(PDF).pdf" download class="download-btn" title="Download My CV"><i class="fa-solid fa-download"></i>CV</a></li>
-    </ul>
-    <ul>
-        <!-- <li><a href="/index.html"><img src="images\signature.jpg" alt="Imran Aderemi" title="Imran Aderemi" width="150" height="50"></a></li> -->
-
-        <li class="HideOnMobile"><a href="/index.html">Home</a></li>
-
-        <li class="HideOnMobile"><a href="/projects.html"><b>Projects</b></a></li>
-
-        <!--<li class="HideOnMobile"><a href="/88.html">88</a></li>-->
-
-        <li class="HideOnMobile"><a href="Imran_Aderemi_CV(PDF).pdf" download class="download-btn" title="Download My CV"><i class="fa-solid fa-download"></i>CV</a></li>
-
-        <li class="MenuButton" onclick=ShowSidebar() ShowSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#fffff"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
-    </ul>
-
-</nav>
-
-<script> 
-    function ShowSidebar(){
-        const sidebar = document.querySelector('.sidebar')
-        sidebar.style.display = 'flex'
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-    function HideSidebar(){
-        const sidebar = document.querySelector('.sidebar')
-        sidebar.style.display = 'none'
+
+body {
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(lightblue, rgb(73, 0, 168));
+    backdrop-filter: blur(3px);
+}
+
+/*-------------------NAVBAR-------------------*/
+nav {
+    /*background-color: lightgrey;*/
+    /* background-color: white; */
+    /* backdrop-filter: blur(10px); */
+    /* box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); */
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+nav a:hover {
+    color: #1100ff;
+    transition: all 0.2s ease;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: lightblue;
+    backdrop-filter: blur(0px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.MenuButton {
+    display: none;
+}
+
+/* @media(max-width: 700px) { */
+    .HideOnMobile {
+        display: none;
     }
 
-</script>
+    .MenuButton {
+        display: block;
+    }
+/* } */
 
-<!----- HERO ----->
-<div class="ProjectsHero">
+/* @media(max-width: 400px) {
+    .sidebar {
+        width: 100%;
+        backdrop-filter: blur(5px)
+    }
+} */
+
+/*---------------------------Hero---------------------------------------*/
+.Hero {
+    flex: 1;
+    height: 100vh;
+}
+
+.ProjectsHero {
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    align-items: center;
+    height: 95%;
+    text-align: center;
+    color: white;
+}
+
+.ProjectsHero h6 {
+    padding-bottom: 100px;
+}
+
+.PortfolioTitle {
+    font-size: 30px;
+    padding-bottom: 35px;
+}
+
+.PortfolioDesc {
+    padding-bottom: 5%;
+}
+
+.portfolio-list {
+    width: 90%;
+    max-width: 90%;
+    /*background-color: #fff;*/
+    padding: 20px;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+    padding-top: 10px;
+}
+
+.portfolio-item {
+    min-height: 155px;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    padding-top: 25px;
+}
+
+.portfolio-item button{
+    margin-bottom: 0px;
+}
+
+.portfolio-item-title{
+    text-align: left;
+    padding-bottom: 7.5px;
+    font-size: 25px;
+    font-style: italic;
+    color: white;
+}
+
+.portfolio-item h3 {
+    margin: 0 0 10px;
+}
+
+.brief-description {
+    font-size: 14px;
+    color: whitesmoke;
+}
+
+.full-description {
+    display: none;
+    font-size: 14px;
+    color: white;
+    margin-top: 10px;
+    padding-top: 35px;
+}
+
+.full-description a {
+    padding-top: 35px;
+    padding-bottom: 10px;
+    display: block;
+}
+
+.full-description h3 {
+    padding-top: 25px;
+}
+
+.full-description p {
+    padding-top: 5px;
+
+}
+
+.Port-Tech {
+    display: inline-block;
+    padding: 5px 15px;
+    border: 2px solid rgb(116, 7, 241); 
+    border-radius: 15px; 
+    background-color: rgb(46, 0, 46); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    margin: 3px; 
+    color: rgb(103, 144, 214);
+}
+
+.expand-btn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 40%;
+    margin-top: 15px;
+}
+
+.expand-btn:hover {
+    background-color: black;
+    color: lightslategray;
+}
+
+/*--*/
+.I88Hero {
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    align-items: center;
+    height: 80%;
+    text-align: center;
+    padding-right: 35px;
+    color: white;
+}
+
+.I88Hero h6 {
+    padding-bottom: 100px;
+}
+
+.I88Hero img {
+    padding: 10px;
+}
+
+.I88Title {
+    padding-bottom: 35px;
+    color: white;
+    font-size: 30px;
+}
+
+.image-cell {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.I88desc p {
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 25px;
+    color: white;
+}
+
+.I88desc {
+    padding-bottom: 15px;
+}
+
+.image-text-table {
+    padding-top: 5%;
+}
+
+.Linkbutton {
+    display: inline-block;
+    /*padding: 10px 20px;*/
+    font-size: 30px;
+    color: white;
+    /*background-color: darkgreen;  Blue background */
+    border: none;
+    /*border-radius: 5px;
+    text-align: center;*/
+    text-decoration: none;
+    cursor: pointer;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.Linkbutton:hover {
+    color: red;
+}
+
+.download-btn {
+    color: red;
+}
+
+.download-btn:hover {
+    color: darkred;
+}
+
+.text-cell p {
+    padding-bottom: 15px;
+}
+
+/*--*/
+.AboutMeHero {
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    /*align-items: center;*/
+    height: 95%; /*Use this to make the page longer*/
+    text-align: center;
+    color: whitesmoke;
+
+}
+
+.AMABTME {
+    padding-left: 25%;
+}
+
+.AMABTMEBio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 35px;
+    border: 2px solid;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 36);
+
+}
+
+.AMABTMEBio:hover {
+    background-color: black;
+}
+
+
+/* Image styling */
+.AMABTMEBio img {
+    max-width: auto; 
+    height: 550px;
+    border-radius: 10px;
+}
+
+/* Text styling */
+.AMABTMEContent {
+    max-width: 75%;
+    color: white;
+}
+
+
+.AboutMeTitle {
+    padding-bottom: 10px;
+    border: 2px solid #333;
+    padding: 0px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: rgb(129, 208, 235);
+
+}
+
+.AboutMeHero h2 {
+    padding-bottom: 15px;
+    padding-top: 55px;
+    padding-left: 35px;
+    text-align: left;
+    margin-left: 0;
+    font-size: 35px;
+    color: white;
+    /*font-family: 'Times New Roman';*/
+}
+
+.AboutMeHero h1 {
+    color: black;
+}
+
+.AboutMeHero h4 {
+    padding-left: 30%;
+    padding-right: 15%;
+}
+
+.AboutMeHero h5 {
+    padding-left: 30%;
+    padding-right: 15%;
+}
+
+.AboutMeHero h6 {
+    padding-bottom: 100px;
+}
+
+.AboutMeHero p {
+    padding-left: 10%;
+    padding-right: 15%;
+    padding-bottom: 10px;
+}
+
+.AMexp, .AMedu, .AMawd {
+    margin-bottom: 0px;
+    padding-bottom: 100px;
+    border-bottom: 5px solid black;
+    border-top: 0px ;
+    background-color: rgb(0, 0, 36);
+    margin: 35px;
+    border-radius: 10px;
+}
+
+.AMts {
+    background-color: rgb(0, 0, 36);
+    margin: 35px;
+    border-radius: 10px;
+    padding-bottom: 35px;
+}
+
+.AMts p {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.AMexp:hover, .AMedu:hover, .AMawd:hover {
+    background-color: black;
+}
+
+.AMts:hover {
+    background-color: black;
+}
+
+.TSList {
+    padding-top: 5px;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.bubble-wrap {
+    display: inline-block;
+    padding: 10px 20px; 
+    border: 2px solid rgb(116, 7, 241); 
+    border-radius: 15px; 
+    background-color: rgb(46, 0, 46); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    margin: 3px; 
+    color: rgb(241, 7, 241);
+}
+
+
+.AMexp h2 {
+    padding-bottom: 75px;
+}
+
+.AMexp P {
+    padding-bottom: 25px;
+    padding-left: 30%;
+    color: rgb(187, 186, 186);
+}
+
+.AMexp h5 {
+    padding-bottom: 10px;
+}
+
+.AMexp h4 {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.AMawd p, .AMedu p {
+    padding-left: 30%;
+    color: rgb(187, 186, 186);
+}
+
+.AMawd p{
+    padding-bottom: 25px;
+}
+
+.AMexpItem1, .AMexpItem2, .AMexpItem3{
+    padding-bottom: 45px;
+}
+
+.AMedu h4 {
+    padding-top: 5%;
+    padding-bottom: 10px;
+}
+
+/*--*/
+.HomeHero {
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px; 
+    height: 35%;
+    text-align: center;
+    color: white;
+
+}
+
+.HomeTitle {
+    color: white;
+    font-size: 20px;
+    float: left;
+    width: 85%;
+    align-items: left;
+    text-align: left;
+    margin-left: 0;
+    padding-left: 5%;
+    padding-bottom: 155px;
+    padding-top: 3%;
+    padding-right: 15%;
+}
+
+.HomeTitle h1 {
+    font-size: 55px;
+}
+
+.HomeTitle h5 {
+    font-size: 20px;
+}
+
+.HomeTitleBio {
+    padding-top: 5px;
+    font-size: 15px;
+    color:  rgb(0, 0, 36);
+    width: 55%;
+}
+
+.HomeHeroNote {
+    padding-bottom: 25px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border: 2px solid #333;
+    padding: 35px;
+    margin: 35px;
+    background-color: rgb(0, 0, 36);
+    border-radius: 10px;
+}
+
+.HomeHeroNote p {
+    padding-bottom: 10px;
+}
+
+.HomeHeroNote h6 {
+    padding-bottom: 55px;
+}
+
+.HomeLinks {
+    display: flex;
+    gap: 15px; /* Adds space between the links */
+    padding-top: 20px;
+}
+
+.HomeLinks a {
+    font-size: 30px;
+    color: white;
+}
+
+.HomeLinks a:hover {
+        color: rgb(0, 0, 36);       
+        transition: color 0.3s;   
+}
+
+/*--mobile view--*/
+@media (max-width: 700px) {
+
+    .AMABTMEBio {
+        flex-direction: column; /* Stack the image and text vertically on smaller screens */
+        margin: 35px;
+        padding: 15px;
+    }
+
+    .AMABTMEBio img, .AMABTMEContent {
+        max-width: 100%; /* Allow image and text to take full width */
+        padding-top: 10px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .AMABTMEBio img {
+        padding-bottom: 25px;
+        border-radius: 55px;
+        max-width: 350px;
+        max-height: 350px;
+    }
+
+    .AMedu h4, .AMexp h4 {
+        padding-right: 15%;
+    }
+
+    .AMedu h5, .AMexp h5 {
+        padding-right: 15%;
+    }
+
+    .AMts h2 {
+        padding-right: 10px;
+    }
+
+    .HomeTitle{
+        text-align: center;
+        align-items: center;
+        float: left;
+        width: 100%;
+        margin-left: 0;
+        padding-bottom: 155px;
+        padding-top: 3%;
+        padding-right: 3%;
+        padding-left: 3%;
+    }
+
+    .HomeTitleBio{
+        text-align: center;
+        align-items: center;
+        width: 100%;
+    }
     
-    <div class="PortfolioTitle">
-        <h1>Portfolio</h1>
-    </div>
-    <p class="PortfolioDesc">Here are some of the projects that I've created:<br> However, more will be <b><i>coming soon</i></b> and this page will be updated gradually. <b>:</b>)</p>
+    .HomeLinks {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        padding-right: 5%;
+        padding-left: 5%;
+        gap: 15px;
+        justify-content: center;
+    }
 
+    .AMexp h2, .AMexpItem1 h2, .AMexpItem1 h4, .AMexpItem1 h5, .AMexpItem1 p, .AMexpItem2 h5, .AMexpItem2 p, .AMexpItem2 h4, .AMexpItem2 h2, .AMexpItem3 h5, .AMexpItem3 p, .AMexpItem3 h4, .AMexpItem3 h2 , .AMedu h2, .AMedu h4, .AMedu p, .AMawd h2, .AMawd p, .AMts h2, .AMtsP p{
+        align-items: center;
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-left: 0%;
+        margin-right: 0%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 
-<script>
-const menu = document.querySelector('#mobile-menu')
-const menuLinks = document.querySelector('.navbar__menu')
+    .PortfolioDesc{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 
-menu.addEventListener('click', function(){
-    menu.classList.toggle('is-active')
-    menuLinks.classList.toggle('active')
+    .image-cell-img{
+        height: 155px;
+        width: 155px;
+    }
 
-});
-
-// Toggles full description
-function toggleDescription(button) {
-    const fullDescription = button.previousElementSibling;  
-    const isVisible = fullDescription.style.display === 'block';  
-
-    if (isVisible) {
-        fullDescription.style.display = 'none';  
-        button.textContent = 'Show More';  
-    } else {
-        fullDescription.style.display = 'block';  
-        button.textContent = 'Show Less';  
+    .image-cell{
+        padding-bottom: 100px;
     }
 }
-</script>
 
-    <div class="portfolio-list">
-
-        <!-- First project -->
-        <div class="portfolio-item">
-            <h3 class="portfolio-item-title"><b>HotBeans Web Solutions</b></h3>
-
-            <div class="brief-description">
-                <p>My first attempt at creating a webpage using HTML, CSS, and JavaScript.</p>
-            </div>
-
-            <div class="full-description">
-                <p><i>May 2023 - June 2023</i></p>
-                <p>In year 12, as part of my IT course, I was tasked with creating a webpage with only a brief description of what the website should include and depict. The only information about HotBeans that I was given was that it's a web development company, and they're looking to hire a new junior web developer.<br> So over a period of 2 weeks, I had to teach myself the basics of HTML, then CSS and Javascript. I primarily used a combination of YouTube tutorials Reddit and Stack Overflow.</p>
-                
-                <h3>Technologies Used:</h3>
-                <p class="Port-Tech">HTML</p>
-                <P class="Port-Tech">CSS</P>
-                <P class="Port-Tech">JavaScript</P>
-
-
-            <a href="https://github.com/ImranAderemi/HotBeans" class="Linkbutton" target="_blank" title=""><b><i class="fa-brands fa-github"></i></b></a>
-            </div>
-
-            <button class="expand-btn" onclick="toggleDescription(this)">Show More</button>
-        </div>
-
-
-        <!-- Second project -->
-        <div class="portfolio-item">
-            <h3 class="portfolio-item-title"><b>Heart Monitor</u></b></h3>
-
-            <div class="brief-description">
-                <p>My very first project using C++.</p>
-            </div>
-
-            <div class="full-description">
-                <p><i>June 2023 - July 2023</i></p>
-                <p>During College, In year 12 I was learning how to use C++ to make a basic application. I was then told to pick a basic application from a list on the brief, the application that I ended up choosing was a heart monitor. However, before posting it I decided to edit and refine it a little.</p>
-                
-                <h3>Technologies Used:</h3>
-                <p class="Port-Tech">C++</p>
-
-
-
-            <a href="https://github.com/ImranAderemi/HeartMonitor" class="Linkbutton" target="_blank" title=""><b><i class="fa-brands fa-github"></i></b></a>
-            </div>
-
-            <button class="expand-btn" onclick="toggleDescription(this)">Show More</button>
-        </div>
-
-        <!-- Third project -->
-        <div class="portfolio-item">
-            <h3 class="portfolio-item-title"><b>Portfolio Webpage</u></b></h3>
-
-            <div class="brief-description">
-                <p>A webpage dedicated to showcasing my portfolio.</p>
-            </div>
-
-            <div class="full-description">
-                <p><i>July 2024 - September 2024</i></p>
-                <p>A webpage that I created to help me showcase my portfolio, it also acts as a biography for myself and showcases my skills and accomplishments. The website also helps me showcase my ability to create basic webpages using HTML, CSS, and JavaScript.</p>
-                
-                <h3>Technologies Used:</h3>
-                <p class="Port-Tech">HTML</p>
-                <P class="Port-Tech">CSS</P>
-                <P class="Port-Tech">JavaScript</P>
-
-
-
-            <a href="https://github.com/ImranAderemi/PortfolioWebpage" class="Linkbutton" target="_blank" title=""><b><i class="fa-brands fa-github"></i></b></a>
-            </div>
-
-            <button class="expand-btn" onclick="toggleDescription(this)">Show More</button>
-        </div>
-
-        <!-- Fourth project -->
-        <div class="portfolio-item">
-            <h3 class="portfolio-item-title"><b>IMS (Inventory Management System)</u></b></h3>
-
-            <div class="brief-description">
-                <p>An application that allows users to monitor and manage their stock.</p>
-            </div>
-
-            <div class="full-description">
-                <p><i>September 2024 - September 2024</i></p>
-                <p>This was my first challenging project created using C#. I call it the IMS (Inventory Management System), and it allows users to store, update, and visualise all of the items that they have in stock in one place. I found this project challenging particularly because it was my first official "solo" project using C#, meaning that I found myself frequently asking my peers and google for help with syntax errors.</p>
-                
-                <h3>Technologies Used:</h3>
-                <p class="Port-Tech">C#</p>
-
-
-
-            <a href="https://github.com/ImranAderemi/Inventory-Management-System" class="Linkbutton" target="_blank" title=""><b><i class="fa-brands fa-github"></i></b></a>
-            </div>
-
-            <button class="expand-btn" onclick="toggleDescription(this)">Show More</button>
-        </div>
-
-       <!-- Fifth project -->
-        <div class="portfolio-item">
-            <h3 class="portfolio-item-title"><b>Currency Converter</u></b></h3>
-
-            <div class="brief-description">
-                <p> A currency converter that uses real-time data.</p>
-            </div>
-
-            <div class="full-description">
-                <p><i>September 2024 - September 2024</i></p>
-                <p>An application that allows users to convert currencies using real-time exchange rates. This was my first attempt at incorporating an API with a project, and it helped me understand how APIs work. I used a combination of help from my peers and YouTube videos to help me understand how APIs work and how to include them in a project.</p>
-                
-                <h3>Technologies Used:</h3>
-                <p class="Port-Tech">Python</p>
-                <P class="Port-Tech">ExchangeRate API</P>
-
-
-            <a href="https://github.com/ImranAderemi/CurrencyConverter" class="Linkbutton" target="_blank" title=""><b><i class="fa-brands fa-github"></i></b></a>
-            </div>
-
-            <button class="expand-btn" onclick="toggleDescription(this)">Show More</button>
-        </div>
-
-        <!-- sixth project -->
-        <div class="portfolio-item">
-            <h3 class="portfolio-item-title"><b>To-Do List</u></b></h3>
-
-            <div class="brief-description">
-                <p>A C# application where users can access their To-Do List.</p>
-            </div>
-
-            <div class="full-description">
-                <p><i>October 2024 - October 2024</i></p>
-                <p>A simple C# application that allows users to add, remove, and show tasks that are on their To-Do List. The tasks would then be stored in a file that was created and stored locally named 'tasks'. This was an attempt for me to improve my C# skills by creating a simple program.</p>
-                
-                <h3>Technologies Used:</h3>
-                <p class="Port-Tech">C#</p>
-
-
-
-            <a href="https://github.com/ImranAderemi/To-Do_List" class="Linkbutton" target="_blank" title=""><b><i class="fa-brands fa-github"></i></b></a>
-            </div>
-
-            <button class="expand-btn" onclick="toggleDescription(this)">Show More</button>
-        </div>
-
-        <!-- Seventh project -->
-        <!--<div class="portfolio-item">
-            <h3><b><u>Project 7: </u></b></h3>
-
-            <div class="brief-description">
-                <p>.</p>
-            </div>
-
-            <div class="full-description">
-                <p><i>.</i></p>
-                <p>.</p>
-                
-                <h3>Technologies Used:</h3>
-                <p class="Port-Tech">- </p>
-                <P class="Port-Tech">- </P>
-                <P class="Port-Tech">- </P>
-
-
-
-            <a href="" class="Linkbutton" target="_blank" title=""><b><i class="fa-brands fa-github"></i></b></a>
-            </div>
-
-            <button class="expand-btn" onclick="toggleDescription(this)">Show More</button>
-        </div>-->
-
-        <!-- Eighth project -->
-        <!--<div class="portfolio-item">
-            <h3><b><u>Project 8: </u></b></h3>
-
-            <div class="brief-description">
-                <p>.</p>
-            </div>
-
-            <div class="full-description">
-                <p><i>.</i></p>
-                <p>.</p>
-                
-                <h3>Technologies Used:</h3>
-                <p class="Port-Tech">- </p>
-                <P class="Port-Tech">- </P>
-                <P class="Port-Tech">- </P>
-
-
-
-            <a href="" class="Linkbutton" target="_blank" title=""><b><i class="fa-brands fa-github"></i></b></a>
-            </div>
-
-            <button class="expand-btn" onclick="toggleDescription(this)">Show More</button>
-        </div>-->
-
-        <!-- Nineth project -->
-        <!--<div class="portfolio-item">
-            <h3><b><u>Project 9: </u></b></h3>
-
-            <div class="brief-description">
-                <p>.</p>
-            </div>
-
-            <div class="full-description">
-                <p><i>.</i></p>
-                <p>.</p>
-                
-                <h3>Technologies Used:</h3>
-                <p class="Port-Tech">- </p>
-                <P class="Port-Tech">- </P>
-                <P class="Port-Tech">- </P>
-
-
-
-            <a href="" class="Linkbutton" target="_blank" title=""><b><i class="fa-brands fa-github"></i></b></a>
-            </div>
-
-            <button class="expand-btn" onclick="toggleDescription(this)">Show More</button>
-        </div>-->
-
-        <!-- Tenth project -->
-        <!--<div class="portfolio-item">
-            <h3><b><u>Project 10: </u></b></h3>
-
-            <div class="brief-description">
-                <p>.</p>
-            </div>
-
-            <div class="full-description">
-                <p><i>.</i></p>
-                <p>.</p>
-                
-                <h3>Technologies Used:</h3>
-                <p class="Port-Tech">- </p>
-                <P class="Port-Tech">- </P>
-                <P class="Port-Tech">- </P>
-
-
-
-            <a href="" class="Linkbutton" target="_blank" title=""><b><i class="fa-brands fa-github"></i></b></a>
-            </div>
-
-            <button class="expand-btn" onclick="toggleDescription(this)">Show More</button>
-        </div>-->
-        
-
-    </div>
-    <h6></h6>
-    <h6></h6>
-
-</div>
-
-<!----- FOOTER ----->
-
-<footer class="Footer">
-    <p>Email: <a href="mailto:imran.a.aderemi@gmail.com">imran.a.aderemi@gmail.com</a></p>
-    <p>Location: London, England</p>
-    
-    <a href="https://www.linkedin.com/in/imran-aderemi/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-    <a href="https://github.com/ImranAderemi" target="_blank"><i class="fa-brands fa-github"></i></a>
-    <a href="https://www.instagram.com/imi.co.uk?igsh=eXcwdmJiYzhpZTN2&utm_source=qr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-    <a href="https://youtube.com/@ifb_88?si=Peltgpg2qp_hvCPR" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-    <div class="FooterCredits">
-        <p><i>Designed and Built by <b>Imran Aderemi</b></i></p>
-    </div>   
-</footer>
-    
-    
-    </body>
-    </html>
+/*--*/
+
+/*---------------------------footer---------------------------------------*/
+
+.Footer {
+    background-color: #242424;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+
+}
+
+.Footer h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.Footer p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.Footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.Footer a:hover {
+    text-decoration: underline;
+}
+
+.Footer .social-icons {
+    margin-top: 10px;
+}
+
+.Footer .social-icons a {
+    margin: 0 10px;
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.Footer a:hover {
+    color: rgb(93, 0, 224);
+}
+
+.Footer .social-icons a:hover {
+    color: #6200ff;
+}
+
+.FooterCredits p {
+    padding-top: 10px;
+    font-size: smaller;
+}
+
+/*---------------------------video-intro-----------------------------*/
+
+.video-intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1; /*Remember to change back to 1*/
+    transition: opacity 2 ease-in-out; /* Transition for fading out */
+
+
+}
+
+/* Hide the video intro is done*/
+.hidden {
+    display: none;
+    opacity: 0; /* Fades out by reducing opacity to 0 */
+    pointer-events: none;
+}
+
+/* makes video fullscreen */
+.video-intro video {
+    width: 100%;
+    height: 55%;
+    object-fit: cover;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
