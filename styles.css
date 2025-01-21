@@ -473,7 +473,7 @@ nav li:first-child {
     padding-bottom: 25px;
 }
 
-.AMexpItem1, .AMexpItem2, .AMexpItem3{
+.AMexpItem1, .AMexpItem2, .AMexpItem3, .AMexpItem4{
     padding-bottom: 45px;
 }
 
@@ -620,7 +620,7 @@ nav li:first-child {
         justify-content: center;
     }
 
-    .AMexp h2, .AMexpItem1 h2, .AMexpItem1 h4, .AMexpItem1 h5, .AMexpItem1 p, .AMexpItem2 h5, .AMexpItem2 p, .AMexpItem2 h4, .AMexpItem2 h2, .AMexpItem3 h5, .AMexpItem3 p, .AMexpItem3 h4, .AMexpItem3 h2 , .AMedu h2, .AMedu h4, .AMedu p, .AMawd h2, .AMawd p, .AMts h2, .AMtsP p{
+    .AMexp h2, .AMexpItem1 h2, .AMexpItem1 h4, .AMexpItem1 h5, .AMexpItem1 p, .AMexpItem2 h5, .AMexpItem2 p, .AMexpItem2 h4, .AMexpItem2 h2, .AMexpItem3 h5, .AMexpItem3 p, .AMexpItem3 h4, .AMexpItem3 h2 , .AMexpItem4 h5, .AMexpItem4 p, .AMexpItem4 h4, .AMexpItem4 h2 , .AMedu h2, .AMedu h4, .AMedu p, .AMawd h2, .AMawd p, .AMts h2, .AMtsP p{
         align-items: center;
         text-align: center;
         padding-left: 5%;
